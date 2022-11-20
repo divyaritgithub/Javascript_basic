@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check the output in console</h1>
+</body>
+</html>
+
+
+
+
+<script>
+
+    // Sorting function
+    function solve(N,arr){
+        for (i = 0; i < N-1; i++)
+       {
+           for (j = 0; j < N-i-1; j++)
+           {
+               if (arr[j] > arr[j+1])
+               {
+               swap(arr,j,j+1);
+                
+               }
+           }
+           
+        
+       }
+       function swap(arr, j, i)
+       {
+           var temp = arr[j];
+           arr[j] = arr[i];
+           arr[i] = temp;
+           
+       }
+       var bag=""
+       for (i = 0; i < arr.length; i++){
+           bag=bag+arr[i]+" "
+       }
+       
+       console.log(bag)
+    }
+
+    function solve2(N,arr){
+        for (i = 0; i < N-1; i++)
+       {
+           for (j = 0; j < N-i-1; j++)
+           {
+               if (arr[j] < arr[j+1])
+               {
+               swap2(arr,j,j+1);
+                
+               }
+           }
+           
+        
+       }
+       function swap2(arr, j, i)
+       {
+           var temp = arr[j];
+           arr[j] = arr[i];
+           arr[i] = temp;
+           
+       }
+       var bag=""
+       for (i = 0; i < arr.length; i++){
+           bag=bag+arr[i]+" "
+       }
+       
+       console.log(bag)
+    }
+    // Original Array
+    var arr = [15, 5, 100, 485, 297, 10];
+    N=arr.length;
+    console.log("Ascending order")
+    solve(N,arr)
+    console.log("descending order")
+
+    solve2(N,arr)
+    // Print Before sorting array
+   
+        
+</script>
